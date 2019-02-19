@@ -1,0 +1,79 @@
+@fonts: '../fonts/';
+
+@font-face {
+  font-family: 'lato-bold';
+  src: url('@{fonts}venturissansadflt-bold.eot');
+  src: url('@{fonts}venturissansadflt-bold.eot?#iefix') format('embedded-opentype'),
+       url('@{fonts}venturissansadflt-bold.woff') format('woff'),
+       url('@{fonts}venturissansadflt-bold.ttf') format('truetype'),
+       url('@{fonts}venturissansadflt-bold.svg#lato-bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'lato-regular';
+  src: url('@{fonts}venturissansadf-regular.eot');
+  src: url('@{fonts}venturissansadf-regular.eot?#iefix') format('embedded-opentype'),
+       url('@{fonts}venturissansadf-regular.woff') format('woff'),
+       url('@{fonts}venturissansadf-regular.ttf') format('truetype'),
+       url('@{fonts}venturissansadf-regular.svg#lato-regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'lato-light';
+  src: url('@{fonts}venturissansadflt-regular.eot');
+  src: url('@{fonts}venturissansadflt-regular.eot?#iefix') format('embedded-opentype'),
+       url('@{fonts}venturissansadflt-regular.woff') format('woff'),
+       url('@{fonts}venturissansadflt-regular.ttf') format('truetype'),
+       url('@{fonts}venturissansadflt-regular.svg#lato-light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'swanse-regular';
+  src: url('@{fonts}swanse.eot');
+  src: url('@{fonts}swanse.eot?#iefix') format('embedded-opentype'),
+       url('@{fonts}swanse.woff') format('woff'),
+       url('@{fonts}swanse.ttf') format('truetype'),
+       url('@{fonts}swanse.svg#swanse-regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//Font Variables
+@swanseregular : 'swanse-regular', Arial, Helvetica, sans-serif;
+@latobold : 'lato-bold', Arial, Helvetica, sans-serif;
+@latoregular : 'lato-regular', Arial, Helvetica, sans-serif;
+@latolight : 'lato-light', Arial, Helvetica, sans-serif;
+
+//custom icons
+@font-face {
+  font-family: 'icomoon';
+  src:  url('@{fonts}icomoon.eot?9q2amf');
+  src:  url('@{fonts}icomoon.eot?9q2amf#iefix') format('embedded-opentype'),
+  url('@{fonts}icomoon.ttf?9q2amf') format('truetype'),
+  url('@{fonts}icomoon.woff?9q2amf') format('woff'),
+  url('@{fonts}icomoon.svg?9q2amf#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-play:before {
+  content: "\e900";
+}

@@ -1,0 +1,273 @@
+@import "../config/_var.less";
+@import "../config/_mixins.less";
+@import "../config/_fonts.less";
+
+html, body {
+	color: @colMain;
+	font-size: unit(@fontSizeStandard, px);
+	scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	
+    @media @extra-small {
+		font-size: unit(12, px);
+	}
+}
+
+body {
+	font-family: @swanseregular;
+}
+::-moz-selection {
+	color: @accent-3;
+	background: @accent-2;
+}
+::selection {
+	color: @accent-3;
+	background: @accent-2;
+}
+strong, b {
+	font-family: @latobold;
+	font-weight: 300;
+}
+
+p {
+	color: @text;
+	.font-size(14);
+	line-height: 1.5;
+}
+
+small {
+	.font-size(12);
+}
+
+a, a:hover, a:focus {
+	.transition();
+	outline: none;
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	margin: 0;
+	font-weight: normal;
+}
+
+h1, .h1 {
+	//font-family: @fjallaoneregular;
+	.font-size(55px);
+	@media @extra-small {
+		.font-size(30px);
+	}
+}
+h2, .h2 {
+	//font-family: @fjallaoneregular;
+	.font-size(48px);
+
+	@media @extra-small {
+		.font-size(27px);
+	}
+}
+h3, .h3 {
+	//font-family: @latobold;
+	.font-size(24px);
+	@media @extra-small {
+		.font-size(18px);
+	}
+}
+
+.small {
+    font-size: 50%;
+    font-weight: 300;
+}
+
+.font{
+	&-fancy {
+		font-family: @latobold;
+	}
+	&-regular {
+		font-family: @swanseregular;
+	}
+	&-bold {
+		font-family: @latobold;
+	}
+	&-light {
+		font-family: @latoregular;
+	}
+	&-medium {
+		font-family: @latoregular;
+	}
+	&-black {
+		font-family: @latobold;
+	}
+	&-lowercase {
+		text-transform: lowercase !important;
+	}
+	&-uppercase {
+		text-transform: uppercase !important;
+	}
+	&-capitalize {
+		text-transform: capitalize !important;
+	}
+	&-transform-none {
+		text-transform: none !important;
+	}
+}
+
+.accent {
+	&-fgcolor{
+		&-white{
+			color: @colWhite;
+			p {
+				color: @colWhite;
+			}
+		}
+		&-black{
+			color: @colBlk;
+			p {
+				color: @colBlk;
+			}
+		}
+	}
+	&-bgcolor{
+		&-white{
+			background-color: @colWhite;
+		}
+		&-black{
+			background-color: @colBlk;
+		}
+	}
+}
+
+/*.container {
+	max-width: 1224px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}*/
+
+.section {
+	position: relative;
+	&__wrapper {
+		position: relative;
+		width: 100%;
+	}
+	&--with{
+		&-bg{
+			&-1{
+				background-image: url("@{image}bg/banner-bg.jpg");
+				background-position: center center;
+				background-size: cover;
+			}
+			&-dots{
+				background-image: url("@{image}pattern/pattern.png");
+				background-position: center center;
+				background-size: 28px 28px;
+			}
+			&-dots-2{
+				background-image: url("@{image}pattern/pattern-2.png");
+				background-position: center center;
+				background-size: 28px 28px;
+			}
+		}
+	}
+}
+
+.main__cont {
+	position: relative;
+	overflow: hidden;
+}
+
+.btn {
+	display: inline-block;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.full-link {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 10;
+}
+
+.text{
+	&--center {
+		text-align: center;
+	}
+	&--left {
+		text-align: left;
+	}
+	&--right {
+		text-align: right;
+	}
+}
+
+.float{
+	&-left {
+		float: left;
+	}
+	&-right {
+		float: right;
+	}
+	&-none {
+		clear: both;
+		float: none;
+	}
+}
+
+.letter-spacing{
+	.generate-letterspacing(5);
+}
+.line-height{
+	.generate-lineheight(5);
+}
+
+/* Content flex*/
+.is-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.is-flex-col {
+    flex-direction: column;
+}
+.is-flex-left {
+    align-items: flex-start;
+}
+.is-flex-right {
+    align-items: flex-end;
+}
+.is-flex-center {
+    align-items: center;
+    justify-content: center;
+}
+.is-flex-top {
+    justify-content: flex-start;
+}
+.is-flex-bottom {
+    justify-content: flex-end;
+}
+.is-flex-space-between {
+    justify-content: space-between;
+}
+
+.blk-search {
+	text-align: center;
+}

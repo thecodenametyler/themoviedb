@@ -1,0 +1,148 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>the movie database | Movies</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://www.youtube.com/iframe_api"></script>
+  
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+  <div class="blk-feateperson">
+
+  </div>
+  
+  <section class="blk-featperson__wrapper section-wrapper"> 
+    <div class="inview-wrapper blk-featperson">
+      <div class="inview-content inview-full bottom">
+        <div class="container">
+          <div class="row blk-featperson__title">
+            <div class="col-sm-12">
+              <h1><span class="author">Katniss<br> Evendeen</span> <span class="title">Her<br> Final<br> Flight</span></h1>
+            </div>
+          </div>
+          <div class="row blk-featperson__seperator">
+            <div class="col-sm-12">
+              <a href="#" class="btn--scroll-down">scroll <i class="icon-play"></i></a>
+              <div class="seperator"></div>
+            </div>
+          </div>
+          <div class="row blk-featperson__text">
+            <div class="col-sm-12">
+              <p><span class="letter">H</span>ey, hey, I've seen this one, I've seen this one. This is a classic, this is where Ralph dresses up as the man from space. Hey wait, wait a minute, who are you? Stella, another one of these damn kids jumped in front of my car. Come on out here, help me take him in the house. Hey c'mon, I had to change, you think I'm going back in that zoot suit? The old man really came through it worked. That's for messing up my hair. Thank god I still got my hair. What on Earth is that thing I'm wearing?</p>
+              <p>What? Don't stop, Wilbert, drive. Whoa, they really cleaned this place up, looks brand new. Wow, ah Red, you look great. Everything looks great. 1:24, I still got time. Oh my god. No, no not again, c'mon, c'mon. Hey. Libyans. We never would have fallen in love.</p>
+              <p>Ahh. Well, aren't you going up to the lake tonight, you've been planning it for two weeks. My equipment, that reminds me, Marty, you better not hook up to the amplifier. There's a slight possibility for overload. Bear with me, Marty, all of your questions will be answered. Roll tape, we'll proceed. He's a very strange young man.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="blk-featperson__image" style="background-image: url(img/person/person-full.png);"> -->
+    <div class="blk-featperson__image">
+      <img src="img/person/person-full.png" alt="">
+    </div>
+  </section>
+  <section class="blk-featpost__wrapper section-wrapper"> 
+    <div class="inview-wrapper blk-featpost">
+      <div class="inview-content inview-full">
+        <div class="container">
+          <div class="row bottom blk-featpost__cover">
+            <div class="col-sm-12">
+              <h2><span class="small">The</span><br><span class="title">Feldgling Army</span></h2>
+            </div>
+          </div>
+          <div class="row blk-featpost__seperator">
+            <div class="col-sm-12">
+              <div class="seperator"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+          
+  
+
+  <!-- Add your site or application content here -->
+  <div class="blk-header">
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link " href="./">Actor</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="genres.html">Genres</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="range.html">Year</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Similar</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="movies.html">Movie</a>
+      </li>
+    </ul>
+  </div>
+  <div style="text-align: center;">
+    <h1 style="margin: 24px 0 0 0;">themoviedb</h1>
+    <p style="margin: 0 0 24px 0;"><i>"the testing ground"</i></p>
+  </div>
+
+  <section class="section__wrapper">
+    <div class="container blk-search">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="blk-search__title">
+            <h2 class="section-title">Search by Movie name</h2>
+          </div>
+          <div class="blk-search__form">
+            <form method="POST" action="/" class="form">
+              <div class="form-group row">
+                  <label for="actorName" class="col-sm-2 col-form-label">Movie :</label>
+                  <div class="col-sm-10">
+                      <input type="text" class="js-autocomplete-movie form-control" id="movieName">
+                      <input type="hidden" id="movieId">
+                  </div>
+              </div>
+
+            </form>
+          </div>
+          <div id="blkSearchResults"></div>
+          <div class="js-movieInfo"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- geodata use to retrieve all the cities -->
+  <script src="js/plugin/jquery-3.3.1.min.js"></script>
+  <script src="js/plugin/underscore.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/plugin/bootstrap.js"></script>
+  <script src="js/plugin/axios.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>

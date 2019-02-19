@@ -1,0 +1,49 @@
+@import "../config/_var.less";
+@import "../config/_mixins.less";
+@import "../config/_fonts.less";
+
+.blk-text {
+    max-width: 960px;
+    margin: 0 auto;
+    &__wrapper {
+        padding: 70px 0;
+        //background: rgba(@accent-2, 0.75);
+    }
+    &--align-center {
+        text-align: center;
+    }
+    &__desc, &__title {
+    }
+    &__title {
+        margin-bottom: 68px;
+    }
+    h1 {
+        .font-size(30);
+        color: @accent-1;
+        font-family: @latobold;
+    }
+    h2 {
+        display: inline-block;
+        color: @accent-4;
+        font-family: @latobold;
+        .font-size(24);
+        border-bottom: 2px solid @accent-4;
+    }
+    p {
+        color: @colWhite;
+        .font-size(18);
+        margin: 0 0 27px 0;
+        display: block;
+        .rem-px(line-height, 21);
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @media @extra-small {
+        h2 {
+            border-bottom: 0;
+            text-decoration: underline;
+        }
+    }
+}

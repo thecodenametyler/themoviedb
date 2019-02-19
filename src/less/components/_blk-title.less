@@ -1,0 +1,24 @@
+@import "../config/_var.less";
+@import "../config/_mixins.less";
+@import "../config/_fonts.less";
+
+.blk-title {
+    text-align: center;
+    &__wrapper {
+        padding: 30px 0 40px 0;
+    }
+    h1 {
+        .font-size(30);
+        .rem-px(line-height,30);
+        color: @accent-1;
+        font-family: @latobold;
+        margin-bottom: 22px;
+    }
+    h2 {
+        display: inline-block;
+        color: @colWhite;
+        font-family: @latobold;
+        .font-size(24);
+        .rem-px(line-height,24);
+    }
+}

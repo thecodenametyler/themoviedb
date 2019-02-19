@@ -1,0 +1,27 @@
+@import "../config/_var.less";
+@import "../config/_mixins.less";
+@import "../config/_fonts.less";
+
+.blk-video {
+    position: relative;
+    &__thumbnail {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        left: 0;
+        height: 100%;
+        z-index: 2;
+        background-size: cover;
+        background-position: center center;
+    }
+    &__play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        [class^="icon-"], [class*=" icon-"] {
+            color: @colWhite;
+            font-size: 84px;
+        }
+    }
+}

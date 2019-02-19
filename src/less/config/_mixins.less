@@ -1,0 +1,141 @@
+@import "../config/_var.less";
+
+.border-radius (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius:    @radius;
+	border-radius:         @radius;
+
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
+
+//transition
+/*.transition(@transition: all, @duration: .3s, @anim: ease, @delay: 0s, @preLoad: false) {
+  transition: @transition @duration @anim @delay;
+  & when (@preLoad = true) {
+    will-change: @transition;
+  }
+}*/
+.transition (@prop: all, @time: 0.3s, @ease: ease) {
+	-webkit-transition: @prop @time @ease;
+	-moz-transition: @prop @time @ease;
+	-o-transition: @prop @time @ease;
+	-ms-transition: @prop @time @ease;
+	transition: @prop @time @ease;
+}
+
+//translate
+.translate(@x, @y) {
+  transform: translate(@x, @y);
+}
+//translateX
+.translateX(@x) {
+  transform: translateX(@x);
+}
+//translateY
+.translateY(@y) {
+  transform: translateY(@y);
+}
+
+.opacity(@opacity) {
+  opacity: @opacity;
+  @opacity-ie: @opacity * 100;
+  filter: alpha(opacity=@opacity-ie); //IE8
+}
+
+//rotate
+.rotate(@x) {
+  transform: rotate(@x);
+}
+//rotateX
+.rotateX(@x) {
+  transform: rotateX(@x);
+}
+//rotateY
+.rotateY(@y) {
+  transform: rotateY(@y);
+}
+
+//Calculate font size base on PX then convert to REM
+.line-height(@sizeValue) {
+  @remValue: @sizeValue;
+  @pxValue: (@sizeValue * 10);
+  line-height: ~"@{pxValue}px"; 
+  line-height: ~"@{remValue}rem";
+}
+.generate-lineheight(@n, @i: 1) when (@i =< @n) {
+  .line-height-@{i} {
+    line-height: (@i * 10)px;
+  }
+  .generate-lineheight(@n, (@i + 1));
+}
+.generate-letterspacing(@n, @i: 1) when (@i =< @n) {
+  .line-height-@{i} {
+    letter-spacing: (@i)px;
+  }
+  .generate-letterspacing(@n, (@i + 1));
+}
+
+// Define the breakpoints in vars
+// Media queries
+/*
+@breakpoint-extra-small: 576px;
+@breakpoint-small: 767px;
+@breakpoint-med-small: 991px;
+@breakpoint-med: 1024px;
+*/
+//ex: @media @phone
+//ex: @media @tablet
+//ex: @media @desktop
+@xs-min: @breakpoint-extra-small;
+@sm-min: @breakpoint-small;
+@md-min: @breakpoint-med-small;
+@lg-min: @breakpoint-med;
+
+@xs-max: (@sm-min - 1);
+@sm-max: (@md-min - 1);
+@md-max: (@lg-min - 1);
+
+@extra-small:          ~"only screen and (max-width: @{xs-min})";
+@phone-strict:   ~"only screen and (min-width: @{xs-min}) and (max-width: @{xs-max})";
+
+@small:         ~"only screen and (max-width: @{sm-min})";
+@tablet-strict:  ~"only screen and (min-width: @{sm-min}) and (max-width: @{sm-max})";
+
+@tablet:        ~"only screen and (max-width: @{md-min})";
+@tablet-max:        ~"only screen and (max-width: @{md-max})";
+
+@desktop-strict: ~"only screen and (min-width: @{md-min}) and (max-width: @{md-max})";
+
+@large:          ~"only screen and (max-width: @{lg-min})";
+
+
+//font-icomoon
+.icomoon(@val) {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: @val;
+}
+
+.rem-px(@property; @sizeValue) {
+  @pxValue: @sizeValue;
+  @remValue: (@sizeValue / @fontSizeStandard);
+  @{property}: ~"@{pxValue}px";
+  @{property}: ~"@{remValue}rem";
+}
+.font-size(@sizeValue) {
+  @pxValue: @sizeValue;
+  @remValue: (@sizeValue / @fontSizeStandard);
+  font-size: ~"@{pxValue}px";
+  font-size: ~"@{remValue}rem";
+}

@@ -1,0 +1,101 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>the movie database | Actors</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://www.youtube.com/iframe_api"></script>
+  
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <div class="blk-header">
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link active" href="./">Actor</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="genres.html">Genres</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="range.html">Year</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Similar</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="movies.html">Movie</a>
+      </li>
+    </ul>
+  </div>
+  <div style="text-align: center;">
+    <h1 style="margin: 24px 0 0 0;">themoviedb</h1>
+    <p style="margin: 0 0 24px 0;"><i>"the testing ground"</i></p>
+  </div>
+
+  <section class="section__wrapper">
+    <div class="container blk-search">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="blk-search__title">
+            <h2 class="section-title">Search by Actor</h2>
+          </div>
+          <div class="blk-search__form">
+            <form method="POST" action="/" class="form">
+              <div class="form-group row">
+                  <label for="actorName" class="col-sm-2 col-form-label">Actor :</label>
+                  <div class="col-sm-10">
+                      <input type="text" class="js-autocomplete-actor form-control" id="actorName">
+                      <input type="hidden" id="actorId">
+                  </div>
+              </div>
+              <div class="form-group">
+                <div class="form__action">
+                    <button type="button" class="btn btn-primary" id="actorTopRated">Top Rated</button>
+                    <button type="button" class="btn btn-primary" id="actorPopular">Popular</button>
+                    <button type="button" class="btn btn-primary" id="actorUpcoming">Upcoming</button>
+                    <button type="button" class="btn btn-primary" id="actorPlayingNow">Now Playing</button>
+                </div>
+              </div>
+
+            </form>
+          </div>
+          <div id="blkSearchResults"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- geodata use to retrieve all the cities -->
+  <script src="js/plugin/jquery-3.3.1.min.js"></script>
+  <script src="js/plugin/underscore.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/plugin/bootstrap.js"></script>
+  <script src="js/plugin/axios.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>

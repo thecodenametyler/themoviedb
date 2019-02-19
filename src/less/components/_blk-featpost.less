@@ -1,0 +1,40 @@
+@import "../config/_var.less";
+@import "../config/_mixins.less";
+@import "../config/_fonts.less";
+
+.blk-featpost {
+    padding: 25px 0;
+    color: #ececec;
+    z-index: 2;
+    position: relative;
+    a, p {
+        color: #ececec;
+    }
+    &__wrapper {
+        background: #0e0d12;
+        overflow: hidden;
+        position: relative;
+    }
+    &__cover {
+        text-align: center;
+        padding: 20px 0;
+        h2 {
+            font-family: @latobold;
+            .small {
+                .font-size(50);
+                .rem-px(line-height, 50);
+            }
+            .title {
+                .font-size(75);
+                .rem-px(line-height, 70);
+            }
+        }
+    }
+    &__seperator {
+        .seperator {
+            background: #ececec;
+            height: 1px;
+            width: 100%;
+        }
+    }
+}

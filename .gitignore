@@ -1,6 +1,7 @@
 /node_modules
 .history
 .vscode
+.package-lock.json
 
 /public/dist
 /public/medias

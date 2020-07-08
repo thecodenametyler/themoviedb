@@ -268,6 +268,169 @@ h3, .h3 {
     justify-content: space-between;
 }
 
+/*cinema api*/
 .blk-search {
 	text-align: center;
+}
+
+.blk-mediagrid {
+	background: #EEE;
+	max-width: 100%;
+	&__wrapper {
+		
+	}
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+	&__sizer,
+	&__item {
+		width: 25%;
+	}
+	&__item {
+		height: 140px;
+		float: left;
+		border-color: hsla(0, 0%, 0%, 0.5);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		&--width2 {
+			width:  50%; 
+			height: 280px;
+		}
+	}
+	&__content {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-end;
+		height: 100%;
+		color: #ffffff;
+		padding: 10px;
+		overflow: hidden;
+		> span {
+			width: 100%;
+			display: block;
+			overflow: hidden;
+		}
+	}
+	h3, h4, h5, p {
+		color: #ffffff;
+		text-shadow: 1px 1px 0 #000;
+		padding: 0;
+		margin: 0;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	img {
+		margin-right: 10px;
+	}
+	
+    @media @small {
+		&__item {
+			width:  50%; 
+			&--width2 {
+				width:  100%; 
+			}
+		}
+    }
+    @media @extra-small {
+		&__item {
+			width:  50%;
+			&--width2 {
+				width:  100%;
+			}
+		}
+    }
+}
+
+.blk-header {
+	&__wrapper {
+		position: fixed;
+		z-index: 999;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background-color: #081c24;
+		width: 100%;
+		z-index: 999;
+		&.sticky {
+			.blk-nav {
+				.tovw(height,80);
+			}
+			.blk-searchbar {
+				input {
+					.tovw(height,40);
+				}
+			}
+		}
+	}
+}
+
+.maincont {
+	.tovw(padding-top,156);
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100%;
+}
+.widelink {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.blk-nav {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	.tovw(height,110);
+	.logo {
+		margin-right: 25px;
+	}
+}
+
+.blk-searchbar {
+	&__wrapper {
+		background: #ffffff;
+	}
+	input {
+		width: 100%;
+		.tovw(height,46);
+		border: 0;
+		border-radius: 0;
+		padding: 0 30px;
+		box-sizing: border-box;
+		will-change: height;
+		&[type="submit"] {
+			display: none;
+		}
+	}
+}
+
+.blk-featlist{
+	padding: 0;
+	width: 100%;
+	&__wrapper {
+		
+	}
+	li {
+		display: flex;
+		position: relative;
+	}
+	img {
+		display: block;
+		margin-right: 15px;
+	}
+	h3, h4, p {
+		padding: 0;
+	}
+	h3 {
+		font-size: 18px;
+		font-weight: 600;
+		margin: 0 0 10px 0;
+	}
 }

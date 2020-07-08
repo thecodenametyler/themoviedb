@@ -22,66 +22,143 @@
   <![endif]-->
 
   <!-- Add your site or application content here -->
-  <div class="blk-header">
-    <ul class="nav nav-pills">
-      <li class="nav-item">
-        <a class="nav-link" href="./">Actor</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="genres.html">Genres</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="range.html">Year</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Similar</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="movies.html">Movie</a>
-      </li>
-    </ul>
-  </div>
-  <div style="text-align: center;">
-    <h1 style="margin: 24px 0 0 0;">themoviedb</h1>
-    <p style="margin: 0 0 24px 0;"><i>"the testing ground"</i></p>
-  </div>
-
-  <section class="section__wrapper">
-    <div class="container blk-search">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="blk-search__title">
-            <h2 class="section-title">Search by Actor</h2>
-          </div>
-          <div class="blk-search__form">
-            <form method="POST" action="/" class="form">
-              <div class="form-group row">
-                  <label for="actorName" class="col-sm-2 col-form-label">Actor :</label>
-                  <div class="col-sm-10">
-                      <input type="text" class="js-autocomplete-actor form-control" id="actorName">
-                      <input type="hidden" id="actorId">
-                  </div>
+  <header class="section__wrapper blk-header__wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="blk-nav">
+              <div class="logo">
+                <img src="" width="100" height="50">
               </div>
-              <div class="form-group">
-                <div class="form__action">
-                    <button type="button" class="btn btn-primary" id="actorTopRated">Top Rated</button>
-                    <button type="button" class="btn btn-primary" id="actorPopular">Popular</button>
-                    <button type="button" class="btn btn-primary" id="actorUpcoming">Upcoming</button>
-                    <button type="button" class="btn btn-primary" id="actorPlayingNow">Now Playing</button>
-                </div>
-              </div>
-
-            </form>
+              <ul class="nav nav-pills">
+                <li class="nav-item">
+                  <a class="nav-link" href="./">Actor</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="genres.html">Genres</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="range.html">Year</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Similar</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="movies.html">Movie</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div id="blkSearchResults"></div>
-          <div id="blkMovieDetails" class="js-singleMovie"></div>
-          <div id="blkCreditMovie" class="js-creditMovie"></div>
-          <div id="blkRecommendMovies" class="js-recommendMovies"></div>
-          <div id="blkSimilarMovies" class="js-similarMovies"></div>
         </div>
       </div>
+      
+      <div class="blk-searchbar__wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <section class="blk-searchbar">
+                <form class="blk-searchbar__form" id="searchbar_form" action="/search" method="get" accept-charset="utf-8">
+                  <input dir="auto" id="search_v4" name="query" type="text" tabindex="2" autocorrect="off" autofill="off" autocomplete="off" spellcheck="false" placeholder="Search for a movie, tv show, person..." value="" data-role="autocomplete" class="k-input" role="textbox" aria-haspopup="true" aria-disabled="false" aria-readonly="false" aria-owns="search_v4_listbox" aria-autocomplete="list">
+                  <input type="submit" disabled="">
+                </form>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  
+    <div class="maincont">
+      
+        <section class="section__wrapper blk-moviedetail__wrapper">
+          <div class="container blk-moviedetail">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="blk-moviedetail__poster">
+                  <div class="image_content">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/xRWht48C2V8XNfzvPehyClOvDni.jpg" srcset="https://image.tmdb.org/t/p/w300_and_h450_bestv2/xRWht48C2V8XNfzvPehyClOvDni.jpg 1x, https://image.tmdb.org/t/p/w600_and_h900_bestv2/xRWht48C2V8XNfzvPehyClOvDni.jpg 2x" alt="Alita: Battle Angel">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="blk-moviedetail__content">
+                  <div class="title">
+                    <h2>Alita: Battle Angel</h2><span>(2019)</span>
+                  </div>
+                  <ul class="actions">
+                    <li>
+                      <div class="chart">chart</div>
+                    </li>
+                    <li>
+                      <a class="no_click play_trailer" href="#" data-id="w7pYhpJaJW8">Play Trailer</a>
+                    </li>
+                  </ul>
+                  <div class="info">
+                      <h3>Overview</h3>
+                      <div class="overview">
+                        <p>When Alita awakens with no memory of who she is in a future world she does not recognize, she is taken in by Ido, a compassionate doctor who realizes that somewhere in this abandoned cyborg shell is the heart and soul of a young woman with an extraordinary past.</p>
+                      </div>
+                      <h3>Featured Crew</h3>
+                      <ol class="people">
+                        <li class="profile">
+                          <p>Robert Rodriguez</p>
+                          <p class="character">Director</p>
+                        </li>
+                        <li class="profile">
+                          <p>Robert Rodriguez</p>
+                          <p class="character">Director</p>
+                        </li>
+                        <li class="profile">
+                          <p>Robert Rodriguez</p>
+                          <p class="character">Director</p>
+                        </li>
+                      </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+      <section class="section__wrapper">
+          <div class="container blk-search">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="blk-search__title">
+                  <h2 class="section-title">Search by Actor</h2>
+                </div>
+                <div class="blk-search__form">
+                  <form method="POST" action="/" class="form">
+                    <div class="form-group row">
+                        <label for="actorName" class="col-sm-2 col-form-label">Actor :</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="js-autocomplete-actor form-control" id="actorName">
+                            <input type="hidden" id="actorId">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="form__action">
+                          <button type="button" class="btn btn-primary" id="actorTopRated">Top Rated</button>
+                          <button type="button" class="btn btn-primary" id="actorPopular">Popular</button>
+                          <button type="button" class="btn btn-primary" id="actorUpcoming">Upcoming</button>
+                          <button type="button" class="btn btn-primary" id="actorPlayingNow">Now Playing</button>
+                      </div>
+                    </div>
+      
+                  </form>
+                </div>
+                <div id="blkSearchResults"></div>
+                <div id="blkMovieDetails" class="js-singleMovie"></div>
+                <div id="blkCreditMovie" class="js-creditMovie"></div>
+                <div id="blkRecommendMovies" class="js-recommendMovies"></div>
+                <div id="blkSimilarMovies" class="js-similarMovies"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
     </div>
-  </section>
+  
 
 
 

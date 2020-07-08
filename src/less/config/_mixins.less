@@ -139,3 +139,19 @@
   font-size: ~"@{pxValue}px";
   font-size: ~"@{remValue}rem";
 }
+
+/*vw base on 1366 viewport*/
+@baseViewPortWidth: 1366;
+@baseViewPortHeight: 768;
+.tovw(@property; @size) {
+  @pxValue: @size;
+  @vwValue: (@size / @baseViewPortWidth)*100;
+  @{property}: ~"@{pxValue}px";
+  @{property}: ~"@{vwValue}vw";
+}
+.tovh(@property; @size) {
+  @pxValue: @size;
+  @vwValue: (@size / @baseViewPortHeight)*100;
+  @{property}: ~"@{pxValue}px";
+  @{property}: ~"@{vwValue}vh";
+}

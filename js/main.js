@@ -1,5 +1,17 @@
 $(function() {
-    
+    if($( ".js-mediagrid" ).length > 0) {
+        $('.js-mediagrid').masonry({
+            itemSelector: '.blk-mediagrid__item',
+            columnWidth: '.blk-mediagrid__sizer',
+            percentPosition: true
+        });
+    }
+    var $header = $("header");
+
+    $(window).on("scroll", function() {
+        var fromTop = $(window).scrollTop();
+        $('header').toggleClass("sticky", (fromTop > 50));
+    });
     //autocomplete for actor
     if($( ".js-autocomplete-actor" ).length > 0) {
         theMovieDB.autocomplete('.js-autocomplete-actor', 'person');

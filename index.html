@@ -22,7 +22,157 @@
   <![endif]-->
 
   <!-- Add your site or application content here -->
-  <div class="blk-header">
+  <header class="section__wrapper blk-header__wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="blk-nav">
+            <div class="logo">
+              <img src="" width="100" height="50">
+            </div>
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link active" href="./">Actor</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="genres.html">Genres</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="range.html">Year</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Similar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="movies.html">Movie</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="blk-searchbar__wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <section class="blk-searchbar">
+              <form class="blk-searchbar__form" id="searchbar_form" action="/search" method="get" accept-charset="utf-8">
+                <input dir="auto" id="search_v4" name="query" type="text" tabindex="2" autocorrect="off" autofill="off" autocomplete="off" spellcheck="false" placeholder="Search for a movie, tv show, person..." value="" data-role="autocomplete" class="k-input" role="textbox" aria-haspopup="true" aria-disabled="false" aria-readonly="false" aria-owns="search_v4_listbox" aria-autocomplete="list">
+                <input type="submit" disabled="">
+              </form>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="maincont">
+    <section class="section__wrapper blk-mediagrid__wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="blk-mediagrid js-mediagrid">
+              <div class="blk-mediagrid__sizer"></div>
+              <div class="blk-mediagrid__item blk-mediagrid__item--width2" style="background-image: url(https://image.tmdb.org/t/p/w500_and_h282_face/lvjscO8wmpEbIfOEZi92Je8Ktlg.jpg);">
+                <div class="blk-mediagrid__content">
+                  <img src="img/movie/small-xs.jpg">
+                  <span>
+                    <h3>Glass</h3>
+                    <p>Bruce Willis, James McAvoy</p>
+                  </span>
+                </div>
+                <a href="#" class="widelink"></a>
+              </div>
+              <div class="blk-mediagrid__item" style="background-image: url(https://image.tmdb.org/t/p/w250_and_h141_face/w7rFgyr7rujNYRex9oxzG26Zq6z.jpg);">
+                <div class="blk-mediagrid__content">
+                  <span>
+                    <h3>Glass</h3>
+                    <p>Bruce Willis, James McAvoy</p>
+                  </span>
+                </div>
+              </div>
+              <div class="blk-mediagrid__item" style="background-image: url(https://image.tmdb.org/t/p/w250_and_h141_face/whtt9F8PFqvEgc4fDSHZPkitFk4.jpg);">
+                <div class="blk-mediagrid__content">
+                  <span>
+                    <h3>Glass</h3>
+                    <p>Bruce Willis, James McAvoy</p>
+                  </span>
+                </div>
+              </div>
+              <div class="blk-mediagrid__item blk-mediagrid__item--width2" style="background-image: url(https://image.tmdb.org/t/p/w500_and_h282_face/aQXTw3wIWuFMy0beXRiZ1xVKtcf.jpg);">
+                <div class="blk-mediagrid__content">
+                  <img src="img/movie/small-xs.jpg">
+                  <span>
+                    <h3>Glass</h3>
+                    <p>Bruce Willis, James McAvoy</p>
+                  </span>
+                </div>
+              </div>
+              <div class="blk-mediagrid__item" style="background-image: url(https://image.tmdb.org/t/p/w250_and_h141_face/hgWAcic93phg4DOuQ8NrsgQWiqu.jpg);">
+                <div class="blk-mediagrid__content">
+                  <span>
+                    <h3>Glass</h3>
+                    <p>Bruce Willis, James McAvoy</p>
+                  </span>
+                </div>
+              </div>
+              <div class="blk-mediagrid__item" style="background-image: url(https://image.tmdb.org/t/p/w250_and_h141_face/rtfS7y2XQ0vjTrm6khq508N0Ehk.jpg);">
+                <div class="blk-mediagrid__content">
+                  <span>
+                    <h3>Glass</h3>
+                    <p>Bruce Willis, James McAvoy</p>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section__wrapper blk-featlist__wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <h2>Featured List</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <ul class="row blk-featlist">
+              <li class="col-md-4">
+                <img class="poster" src="https://image.tmdb.org/t/p/w94_and_h141_bestv2/1ydP3HPsFB0aLVijHXt1obSLqlC.jpg">
+                <div>
+                  <h3>Best Picture Winners - The Academy Awards</h3>
+                  <p>Argo, 12 Years a Slave, Birdman, 84 more...</p>
+                </div>
+              </li>
+              <li class="col-md-4">
+                <img class="poster" src="https://image.tmdb.org/t/p/w94_and_h141_bestv2/1ydP3HPsFB0aLVijHXt1obSLqlC.jpg">
+                <div>
+                  <h3>Best Picture Winners - The Academy Awards</h3>
+                  <p>Argo, 12 Years a Slave, Birdman, 84 more...</p>
+                </div>
+              </li>
+              <li class="col-md-4">
+                <img class="poster" src="https://image.tmdb.org/t/p/w94_and_h141_bestv2/1ydP3HPsFB0aLVijHXt1obSLqlC.jpg">
+                <div>
+                  <h3>Best Picture Winners - The Academy Awards</h3>
+                  <p>Argo, 12 Years a Slave, Birdman, 84 more...</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </div>
+
+
+  <div class="blk-">
     <ul class="nav nav-pills">
       <li class="nav-item">
         <a class="nav-link active" href="./">Actor</a>
@@ -86,6 +236,7 @@
   <script src="js/plugin/jquery-3.3.1.min.js"></script>
   <script src="js/plugin/underscore.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
   <script src="js/plugin/bootstrap.js"></script>
   <script src="js/plugin/axios.min.js"></script>
   <script src="js/main.js"></script>
